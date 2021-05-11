@@ -16,7 +16,6 @@ package com.domain;
 	private String name;
 	private String password; 
 	private String IDcard; //身份证
-	private String hphoto; //头像
 	private String phone;//手机号
 	private String createdate;//创建时间
 	private String Loginlog;//登录日志
@@ -47,12 +46,7 @@ package com.domain;
 	public void setIDcard(String iDcard) {
 		IDcard = iDcard;
 	}
-	public String getHphoto() {
-		return hphoto;
-	}
-	public void setHphoto(String hphoto) {
-		this.hphoto = hphoto;
-	}
+
 	public String getCreatedate() {
 		return createdate;
 	}
@@ -90,7 +84,6 @@ package com.domain;
 		builder.append(", IDcard=");
 		builder.append(IDcard);
 		builder.append(", hphoto=");
-		builder.append(hphoto);
 		builder.append(", phone=");
 		builder.append(phone);
 		builder.append(", createdate=");

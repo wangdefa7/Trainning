@@ -10,7 +10,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result column="password" property="password" jdbcType="VARCHAR"/>
         <result column="IDcard" property="IDcard" jdbcType="VARCHAR"/>
         <result column="phone" property="phone" jdbcType="VARCHAR"/>
-        <result column="hphoto" property="hphoto" jdbcType="VARCHAR"/>
         <result column="identity" property="identity" jdbcType="VARCHAR"/>
         <result column="createdate" property="createdate" jdbcType="VARCHAR"/>
         <result column="Loginlog" property="Loginlog" jdbcType="VARCHAR"/>
@@ -30,9 +29,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
     <insert id="RegisterUser" useGeneratedKeys="true"   parameterType="com.domain.User" keyProperty="id">
     		insert into user
-			(id,name,identity,password,phone,IDcard,hphoto,Loginlog)
+			(id,name,identity,password,phone,IDcard,Loginlog)
 			values
-			( #{id}, #{name},#{identity},#{password},#{phone},#{IDcard},#{hphoto},#{Loginlog})
+			( #{id}, #{name},#{identity},#{password},#{phone},#{IDcard},#{Loginlog})
     </insert>
 	<update id="update" parameterType="com.domain.User">
 		update user set

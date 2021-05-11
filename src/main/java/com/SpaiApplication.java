@@ -27,11 +27,3 @@ public class SpaiApplication extends SpringBootServletInitializer {
     }
 
 }
-/*public class SpaiApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(SpaiApplication.class, args);
-		System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-	}
-
-}*/
