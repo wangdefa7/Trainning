@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息填写</title>
+</head>
+<body>
+<!-- 引入公共页面的组件 -->
+<div th:include="common/importFile::html" ></div>
+<h3>注册用户</h3>
+<div class="row" >
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form id="updateUserInfo" class="form-horizontal" method="post">
+                    <div class="form-group">
+                        <label for="id" class='col-xs-2 control-label'>
+                            <strong style="font-size:12px;color:#FF0033">*</strong>
+                            <!-- <span class="nes">*</span> -->学号/教师号:
+                        </label>
+                        <div class="col-xs-4">
+                            <input class="form-control autofocus" type="text" id="id" name="id">
+                        </div>
+                        <label for="name" class="col-xs-2 control-label">
+                            <strong style="font-size:12px;color:#FF0033">*</strong>
+                            <!-- <span class="nes">*</span> -->姓名：
+                        </label>
+                        <div class="col-xs-4">
+                            <input class="form-control" type="text" id="name" name="name" placeholder="">
+                            <span id='mcMsg' style="color: #FF0033"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="identify" class='col-xs-2 control-label'>
+                            <strong style="font-size:12px;color:#FF0033">*</strong>
+                            <!-- <span class="nes">*</span> -->身份：
+                        </label>
+                        <div class="col-xs-4">
+                            <input class="form-control" type="radio" name="identify" id="identify" value="老师" checked>老师
+                            <input class="form-control" type="radio" name="identify" id="identify1" value="学生">学生
+                        </div>
+                        <label for="identify" class='col-xs-2 control-label'>
+                            <strong style="font-size:12px;color:#FF0033">*</strong>
+                            <!-- <span class="nes">*</span> -->性别：
+                        </label>
+                        <div class="col-xs-4">
+                            <input class="form-control" type="radio" name="identify" id="sex" value="男生" checked>男生
+                            <input class="form-control" type="radio" name="identify" id="sex1" value="女生">女生
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="IDcard" class='col-xs-2 control-label'>身份证号：</label>
+                        <div class="col-xs-4">
+                            <input class="form-control" type="text" id="IDcard" name="IDcard" placeholder=""></input>
+                        </div>
+                        <label for="editbz" class='col-xs-2 control-label'>备注：</label>
+                        <div class="col-xs-10">
+                            <textarea class="form-control" id="editbz" name="bz" placeholder="请输入备注"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12" style="padding-top:10px;text-align: center;">
+                            <button type="button" class="btn btn-green btn-sm" id="editInstInfo">
+                                <i class="glyphicon glyphicon-floppy-disk">&nbsp;</i>保存
+                            </button>
+                            <button type="button" class="btn btn-green btn-sm" id="closeEdit" >
+                                <i class="glyphicon glyphicon-floppy-remove">&nbsp;</i>取消
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

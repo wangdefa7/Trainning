@@ -66,7 +66,7 @@ public class UserController extends Base{
     public String insert(@RequestBody  String user) {
     	User user1=ToBean.stringtobean_User(user);
     	System.out.println("%%处理后的user:"+user1);
-        return isOK(userService.RegisterUser(user1));
+        return isOK(userService.registerUser(user1));
     }
     //用户的登录
     @RequestMapping(value="/login" ,method = RequestMethod.POST)

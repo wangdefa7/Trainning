@@ -10,15 +10,15 @@ public interface UserMapper{
 	/*
 	 *显示全部用户 
 	 * */
-	public List<User> ListUser();
+	public List<User> listUser();
 	/*
 	 * 用户登录的验证
 	 *  */
-	public int LoginUser(User user);
+	public int loginUser(User user);
 	/*
 	 * 用户的注册
 	 * */
-	public int RegisterUser(User user);
+	public int registerUser(User user);
 	/*
 	 * 用户的删除
 	 * */

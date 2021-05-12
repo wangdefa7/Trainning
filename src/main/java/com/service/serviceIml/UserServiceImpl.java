@@ -14,20 +14,22 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	UserMapper usermapper;
 	
+	@Override
 	public List<User> listUser() {
-		return usermapper.ListUser();
+		return usermapper.listUser();
 	}
 
 	//用户登录
-	public int LoginUser(User user) {
+	@Override
+	public int loginUser(User user) {
 
-		return usermapper.LoginUser(user);
+		return usermapper.loginUser(user);
 	}
 
 	@Override
-	public int RegisterUser(User user) {
+	public int registerUser(User user) {
 		// TODO Auto-generated method stub
-		return usermapper.RegisterUser(user);
+		return usermapper.registerUser(user);
 	}
 
 	@Override

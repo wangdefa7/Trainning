@@ -4,12 +4,10 @@
 <title>随手拍</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="stylesheet" type="text/css"
-	th:href="@{/libs/login/@quickui_media/style.css}"/>
-<script th:src="@{/libs/js/jquery.js}"></script>
-<script th:src="@{/libs/js/form/placeholder.js}"></script>
 </head>
 <body>
+<!-- 引入公共页面的组件 -->
+<div th:include="common/importFile::html" ></div>
 	<div class="win">
 		<div class="login_win">
 			<div class="login_title"></div>
@@ -19,15 +17,27 @@
 					<span>用户登录</span>
 				</div>
 				<div class="user">
-					<i></i><input type="text" id="name" th:field="*{name}" placeholder="账号/手机号" />
+					<i></i><input type="text" id="name" th:field="*{name}" placeholder="学号/教师号" />
 				</div>
 				<div class="passerword">
 					<i></i><input type="password" id="password" th:field="*{password}"
 						placeholder="密码" />
 				</div>
 				<input type="submit" value="登 录" class="submit" />
+				<input type="button" id="register" value="注 册" class="submit" />
 			</form>
 		</div>
 	</div>
+<script>
+	$('#register').click(function () {
+		console.log('注册')
+		layer.open({
+			type:2,
+			title:"注册用户",
+			area: 'auto',
+			content:"/register"
+		});
+	});
+</script>
 </body>
 </html>

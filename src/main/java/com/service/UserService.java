@@ -12,11 +12,11 @@ public interface UserService
 	 /*
 		 * 用户的登录
 		 * */
-	public int LoginUser(User user);
+	public int loginUser(User user);
 	/*
 	 * 用户的注册
 	 * */
-	public int RegisterUser(User user);
+	public int registerUser(User user);
 	/*
 	 * 用户的删除
 	 * */

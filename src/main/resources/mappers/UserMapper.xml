@@ -15,19 +15,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result column="Loginlog" property="Loginlog" jdbcType="VARCHAR"/>
     </resultMap>
 
-   <select id="ListUser" resultType="com.domain.User" >
+   <select id="listUser" resultType="com.domain.User" >
           select * from user
    </select>
     
-<!--     <select id="LoginUser" resultType="int" parameterMap="UserResultMap">
+     <select id="loginUser" resultType="int" parameterMap="UserResultMap">
 			select * from user
 			<where>
-				name = #{name}
+				id = #{id}
 				and password = #{password}
 			</where>
-	</select> -->
+	</select>
 	
-    <insert id="RegisterUser" useGeneratedKeys="true"   parameterType="com.domain.User" keyProperty="id">
+    <insert id="registerUser" useGeneratedKeys="true"   parameterType="com.domain.User" keyProperty="id">
     		insert into user
 			(id,name,identity,password,phone,IDcard,Loginlog)
 			values
